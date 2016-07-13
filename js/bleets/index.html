@@ -1,0 +1,7 @@
+<a data-ui-sref="grumbleNew">New Grumble</a>
+
+<h2> All Bleets </h2>
+<div data-ng-repeat="bleet in BleetIndexViewModel.bleets">
+  <h3><a data-ui-sref="bleetShow({id: bleet.id})">{{bleet.id}}</a></h3>
+  <p>{{bleet.content}}</p>
+</div>
