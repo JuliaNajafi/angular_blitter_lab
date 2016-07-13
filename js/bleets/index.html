@@ -1,4 +1,11 @@
-<a data-ui-sref="grumbleNew">New Grumble</a>
+
+<h3><a ng-click="show = ! show"> Create Bleet </a> </h3>
+<form data-ng-show="show">
+  <textarea placeholder="Bleet content" data-ng-model="BleetIndexViewModel.bleet.content"></textarea>
+  <button type="button" data-ng-click="BleetIndexViewModel.create()">Create</button>
+</form>
+
+
 
 <h2> All Bleets </h2>
 <div data-ng-repeat="bleet in BleetIndexViewModel.bleets">
