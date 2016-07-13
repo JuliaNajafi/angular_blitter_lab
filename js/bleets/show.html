@@ -4,3 +4,11 @@
 <p>LIKES: {{BleetShowViewModel.bleet.likes}}</p>
 <p>CREATED AT:  {{BleetShowViewModel.bleet.created_at}}</p>
 <p>UPDATED AT: {{BleetShowViewModel.bleet.updated_at}}</p>
+
+
+<h3><a ng-click="show = ! show"> Edit Bleet </a> </h3>
+<form data-ng-show="show">
+  <textarea placeholder="Bleet content" data-ng-model="BleetShowViewModel.bleet.content"></textarea>
+  <button type="button" data-ng-click="BleetShowViewModel.update()">Edit</button>
+  <button data-ng-click="BleetShowViewModel.destroy()">Delete</button>
+</form>
